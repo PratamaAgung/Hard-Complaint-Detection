@@ -56,3 +56,19 @@ This is the experiment with 2k dataset
 | Random Forest + Rule Based | -             | TF-IDF                    | 0.9447                   |
 | Random Forest + Rule Based | Normalization + stemmer | TF-IDF                    | 0.9547                    |
 | Random Forest + Rule Based | Normalization + stemmer | TF-IDF with min_occurence | 0.9547                    |
+
+Experiment Using fasttext
+
+| Algorithm | Feature Extractor | Average F1-score |
+|:---------:|:-----------------:|:----------------:|
+| SVM       | Fasttext          | 0.8610           |
+| SVM       | Fasttext + TF-IDF | 0.8550           |
+
+
+Experiment using Ensemble Method
+
+| Algorithm |                 Notes                | Average F1-score |
+|:---------:|:------------------------------------:|:----------------:|
+| XGBoost   | TF                                   | 0.9293           |
+| XGBoost   | TF-IDF                               | 0.9213           |
+| Voting    | Rule-based, SVM + TF, SVM + fasttext | 0.9477           |
